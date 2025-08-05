@@ -5,7 +5,7 @@
 //  Created by Mann Bellani on 8/5/25.
 
 
-// invividual row view for list navigation
+// invividual row view for list navigation, pulls from landmark array index. 
 
 import SwiftUI
 
@@ -20,10 +20,18 @@ struct LandmarkRow: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(landmark.name)
+            
+            Spacer()
         }
     }
 }
 
-#Preview {
-    LandmarkRow(landmark: landmarks[0])
+#Preview ("Turtle Rock"){
+    Group {
+        LandmarkRow(landmark: landmarks[0])
+        LandmarkRow(landmark: landmarks[1])
+    }
+    
 }
+
+
