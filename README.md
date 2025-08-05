@@ -17,11 +17,14 @@ A small iOS app I built while learning SwiftUI, based on Apple’s Landmarks tut
 - **State management** → using `@State`, `@Binding`, and `@ObservedObject`  
 - **Navigation** → list/detail views with `NavigationStack`  
 - **MapKit integration** → embedding interactive maps in SwiftUI  
-- **Code organization** → breaking UI into reusable components  
+- **Code organization** → breaking UI into reusable components
+- **Firebase integration** → fetching and syncing data with Firestore  
+- **Async data loading** → using `async/await` for smooth updates  
 
 ---
 
 ## Creative Additions  
+- Firebase-backed live data source
 - 
 
 ---
