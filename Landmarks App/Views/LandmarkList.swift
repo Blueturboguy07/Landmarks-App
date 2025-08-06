@@ -9,10 +9,28 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
-        List(landmarks) { landmark in
-            
-            LandmarkRow(landmark: landmark)
-        } // dtynamic list which displays all landmarks presented through landmarkRow  
+        
+        
+        NavigationSplitView { // creats columns progression for app, three columns
+
+                   List(landmarks) { landmark in
+                       NavigationLink { // this turns the dynnamic list into a navigable list linked to the landmark detail view
+
+                           LandmarkDetail()
+
+                       } label: {
+
+                           LandmarkRow(landmark: landmark)
+
+                       }
+                   }
+                   .navigationTitle("Landmarks")
+               } detail: {
+
+                   Text("Select a Landmark")
+
+               }
+         // dtynamic list which displays all landmarks presented through landmarkRow
     }
 }
 
