@@ -22,6 +22,7 @@
 		BDC23C9A2E3D54E100DC1684 /* Landmarks_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC23C992E3D54E100DC1684 /* Landmarks_AppTests.swift */; };
 		BDC23CA42E3D54E100DC1684 /* Landmarks_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC23CA32E3D54E100DC1684 /* Landmarks_AppUITests.swift */; };
 		BDC23CA62E3D54E100DC1684 /* Landmarks_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC23CA52E3D54E100DC1684 /* Landmarks_AppUITestsLaunchTests.swift */; };
+		BDD8EC212E4BD23E002C59AC /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = BDAB4AEA2E422398008F23D4 /* landmarkData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +282,7 @@
 			files = (
 				BDC23C902E3D54E100DC1684 /* Preview Assets.xcassets in Resources */,
 				BDC23C8D2E3D54E100DC1684 /* Assets.xcassets in Resources */,
+				BDD8EC212E4BD23E002C59AC /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

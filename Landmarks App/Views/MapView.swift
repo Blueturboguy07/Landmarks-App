@@ -11,15 +11,17 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    var coordinate: CLLocationCoordinate2D // creates coordinate parameter to be passed in from landmarkdetail
+    
     var body: some View {
-        Map(initialPosition: .region(region))
+        Map(position: .constant(.region(region)))
     }
     
     private var region: MKCoordinateRegion {
         
         MKCoordinateRegion(
         
-            center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.116_868),
+            center: coordinate,
             span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
             
         
@@ -28,5 +30,5 @@ struct MapView: View {
 }
 
 #Preview {
-    MapView()
+    MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
 }

@@ -9,33 +9,36 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    
+    var landmark: Landmrk // creates landmark parmater to pass in landmark from array
+    
     var body: some View {
         
-            VStack {
+            ScrollView {
                 
-                MapView()
+                MapView(coordinate: landmark.locationCoordinate) //passes location corrdinte in for selected landmark
                     .frame(height: 300)
-                CircleImage()
+                CircleImage(image: landmark.image) //passes location corrdinte in for selected landmark
                     .offset(y: -130)
                     .padding(.bottom, -130)
                 VStack(alignment: .leading) {
             
-                    Text("Turtle Rock")
+                    Text(landmark.name)
                         .font(.title)
                         .foregroundColor(Color.black)
                     HStack {
-                        Text("Mann Bellani National Park")
+                        Text(landmark.park)
                             .font(.subheadline)
                         Spacer()
-                        Text("California")
+                        Text(landmark.state)
                             .font(.subheadline)
                     }
                     
                     Divider()
                     
-                    Text("About Turtle Rock")
+                    Text("About \(landmark.name)")
                         .font(.title2)
-                    Text("Descriptive Text Goes Here")
+                    Text(landmark.description)
                 }
                 .padding()
                 
@@ -49,5 +52,5 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail()
+    LandmarkDetail(landmark: landmarks[0])
 }

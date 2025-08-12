@@ -16,7 +16,7 @@ struct LandmarkList: View {
                    List(landmarks) { landmark in
                        NavigationLink { // this turns the dynnamic list into a navigable list linked to the landmark detail view
 
-                           LandmarkDetail()
+                           LandmarkDetail(landmark: landmark) //passes selected landmark into landmark detail from the list
 
                        } label: {
 
