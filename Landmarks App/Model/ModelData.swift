@@ -10,6 +10,7 @@ import Observation
 
 @Observable class ModelData {
     var landmarks: [Landmrk] = load(filename: "landmarkData.json")
+    var hikes : [Hike] = load(filename: "hikeData.json") // loading hikes into model
 }
 
 
