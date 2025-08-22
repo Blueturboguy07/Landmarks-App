@@ -14,6 +14,7 @@ struct ContentView: View {
     enum Tab { // enumerates to add tabs to switch between list view and featured view
         case list
         case featured
+        case profile
     }
 
     var body: some View {
@@ -32,6 +33,11 @@ struct ContentView: View {
                 }
                 .tag(Tab.list)
             
+            ProfileHost()
+                .tabItem {
+                    Label("Profile", systemImage: "person.crop.circle")
+                }
+                .tag(Tab.featured)
         }   }
 
 }
