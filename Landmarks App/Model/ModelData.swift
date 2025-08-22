@@ -11,7 +11,25 @@ import Observation
 @Observable class ModelData {
     var landmarks: [Landmrk] = load(filename: "landmarkData.json")
     var hikes : [Hike] = load(filename: "hikeData.json") // loading hikes into model
+    
+    var features: [Landmrk] {
+        
+        landmarks.filter { $0.isFeatured}
+    }
+    
+    var categories: [String: [Landmrk]] {
+
+            Dictionary(
+
+                grouping: landmarks,
+
+                by: { $0.category.rawValue }
+
+            )
+
+        }
 }
+
 
 
 func load<T: Decodable>( filename: String) -> T {
