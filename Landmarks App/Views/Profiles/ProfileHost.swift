@@ -25,7 +25,8 @@ struct ProfileHost: View {
 
             } else {
                 
-                Text("Profile Editor not implemented yet")
+                ProfileEditor(profile: $draftProfile)
+                    
             }
             
             
