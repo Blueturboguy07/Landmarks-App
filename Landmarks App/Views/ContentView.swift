@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var editMode: EditMode = .inactive
     @State private var selection: Tab = .featured // sets default tab as featured
     
     enum Tab { // enumerates to add tabs to switch between list view and featured view
@@ -37,7 +38,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
-                .tag(Tab.featured)
+                .tag(Tab.profile)
+                .environment(\.editMode, $editMode)
+            
         }   }
 
 }
