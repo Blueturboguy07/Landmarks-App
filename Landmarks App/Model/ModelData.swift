@@ -11,6 +11,7 @@ import Observation
 @Observable class ModelData {
     var landmarks: [Landmrk] = load(filename: "landmarkData.json")
     var hikes : [Hike] = load(filename: "hikeData.json") // loading hikes into model
+    var profile = Profile.default // instance of the user profile that persists even after the user dismisses the profile view
     
     var features: [Landmrk] {
         
