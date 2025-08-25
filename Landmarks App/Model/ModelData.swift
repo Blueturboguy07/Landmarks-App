@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  ModelData.swift
 //  Landmarks App
 //
 //  Created by Mann Bellani on 8/4/25.
